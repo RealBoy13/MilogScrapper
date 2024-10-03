@@ -1,0 +1,36 @@
+[
+    {
+        "label": "WordScraper",
+        "importPath": "words",
+        "description": "words",
+        "isExtraImport": true,
+        "detail": "words",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "WordScraper",
+        "kind": 6,
+        "importPath": "words",
+        "description": "words",
+        "peekOfCode": "class WordScraper:\n    def __init__(self, word):\n        self.word = word\n        self.url = f'https://milog.co.il/{word}'\n        self.soup = None\n    def fetch_content(self):\n        # Send a GET request to fetch the raw HTML content\n        response = requests.get(self.url)\n        if response.status_code == 200:\n            # Parse the HTML content using BeautifulSoup",
+        "detail": "words",
+        "documentation": {}
+    }
+]
