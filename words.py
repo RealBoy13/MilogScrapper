@@ -59,9 +59,12 @@ class WordScraper:
         # Get definitions
         definitions = self.get_definitions()
         
-        # Save to file
-        with open(file_name, 'w', encoding='utf-8') as file:
+        # Append to file (mode 'a' means append)
+        with open(file_name, 'a', encoding='utf-8') as file:
+            # Add a heading for each new word
+            file.write(f"\nWord: {self.word}\n")
+            file.write('-' * 20 + '\n')
             for definition in definitions:
                 file.write(definition + '\n')
         
-        print(f"Definitions saved to {file_name}")
+        print(f"Definitions for {self.word} appended to {file_name}")
